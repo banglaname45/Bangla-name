@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find beautiful Bengali baby names with meanings in Bangla and English. Search by gender, religion, or starting letter.">
+    <title>Bangla Name Finder - Discover Beautiful Bengali Baby Names</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-siliguri bg-gray-50">
+    <header class="bg-green-600 text-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h1 class="text-3xl font-bold">Bangla Name Finder</h1>
+                    <p class="text-green-100">Discover beautiful Bengali baby names with meanings</p>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="Search names..." class="w-full px-4 py-2 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300">
+                        <button id="searchBtn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-700 text-white px-4 py-1 rounded-full hover:bg-green-800">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Welcome to Bangla Name Finder</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Find the perfect Bengali name for your baby with our comprehensive collection of names for boys and girls. Each name includes meanings in both Bangla and English, along with religious and cultural information.</p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Browse Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="names.html?gender=Boy" class="category-card bg-blue-50 hover:bg-blue-100 border border-blue-200">
+                    <h3>Boy Names</h3>
+                    <p class="text-sm text-gray-600">Traditional & modern</p>
+                </a>
+                <a href="names.html?gender=Girl" class="category-card bg-pink-50 hover:bg-pink-100 border border-pink-200">
+                    <h3>Girl Names</h3>
+                    <p class="text-sm text-gray-600">Beautiful & meaningful</p>
+                </a>
+                <a href="names.html?religion=Islamic" class="category-card bg-teal-50 hover:bg-teal-100 border border-teal-200">
+                    <h3>Islamic Names</h3>
+                    <p class="text-sm text-gray-600">From Quran & Hadith</p>
+                </a>
+                <a href="names.html?religion=Hindu" class="category-card bg-purple-50 hover:bg-purple-100 border border-purple-200">
+                    <h3>Hindu Names</h3>
+                    <p class="text-sm text-gray-600">From scriptures</p>
+                </a>
+                <a href="names.html" class="category-card bg-yellow-50 hover:bg-yellow-100 border border-yellow-200">
+                    <h3>Modern Names</h3>
+                    <p class="text-sm text-gray-600">Contemporary choices</p>
+                </a>
+                <a href="names.html" class="category-card bg-indigo-50 hover:bg-indigo-100 border border-indigo-200">
+                    <h3>A-Z List</h3>
+                    <p class="text-sm text-gray-600">Browse all names</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Can't decide? Try our random name generator!</h2>
+                <button id="randomNameBtn" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition duration-300">Generate Random Name</button>
+                <div id="randomNameResult" class="mt-4 hidden">
+                    <div class="bg-gray-50 p-4 rounded-lg inline-block">
+                        <h3 id="randomName" class="text-xl font-bold text-gray-800"></h3>
+                        <p id="randomMeaning" class="text-gray-600"></p>
+                        <a id="randomNameLink" href="#" class="text-green-600 hover:underline mt-2 inline-block">See Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Bangla Name Finder</h3>
+                    <p class="text-gray-400">Helping you find the perfect Bengali baby name since 2023</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold mb-3">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                            <li><a href="names.html" class="text-gray-400 hover:text-white">All Names</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3">Categories</h4>
+                        <ul class="space-y-2">
+                            <li><a href="names.html?gender=Boy" class="text-gray-400 hover:text-white">Boy Names</a></li>
+                            <li><a href="names.html?gender=Girl" class="text-gray-400 hover:text-white">Girl Names</a></li>
+                            <li><a href="names.html?religion=Islamic" class="text-gray-400 hover:text-white">Islamic Names</a></li>
+                            <li><a href="names.html?religion=Hindu" class="text-gray-400 hover:text-white">Hindu Names</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Bangla Name Finder. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
